@@ -37,3 +37,8 @@ class GeoEngine():
 
     def get_fao_soil_type(self, latlon: LATLON):
         ...
+
+# TODO: Daymet
+# curl -L -s 'https://daymet.ornl.gov/single-pixel/api/data?lat=46.372&lon=-119.272&format=json' | jq .
+# MODIS:
+# curl -L 'https://modis.ornl.gov/rst/api/v1/MCD12Q1/subset?latitude=46.372&longitude=119.272&startDate=A2010001&endDate=A2011001&kmAboveBelow=1&kmLeftRight=1'

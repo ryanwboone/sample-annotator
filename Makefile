@@ -16,3 +16,6 @@ $(SAMPLE_SCHEMA_JSON): $(SAMPLE_SCHEMA_YAML)
 test:
 	pipenv install --dev
 	pipenv run python -m unittest
+
+examples/bioscales.json:
+	curl -L -s https://fair.ornl.gov/NMDC/NMDC.json | jq . > $@
